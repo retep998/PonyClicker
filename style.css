@@ -26,11 +26,53 @@ body {
     font-family: Equestria;
 }
 
-.boop {
+h1 {
+    font-size: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-#count {
-    font-size: 80px;
+table {
+    font-size: 30px;
+    border-collapse: collapse;
+}
+
+td {
+    padding-left: 12px;
+    padding-right: 12px;
+    border: solid 3px #36c;
+}
+
+.boop {
+    font-size: 32px;
+    z-index: 1;
+    color: #63c;
+}
+
+#left *, #right * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left {
+    background-color: #8bf;
+    color: #63c;
+    border: solid 3px #63c;
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+}
+
+#right {
+    background-color: #b8f;
+    color: #36c;
+    border: solid 3px #36c;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
 }
 
 #ponyarea {
@@ -40,12 +82,9 @@ body {
 }
 
 #pony {
-
 }
 
-#boops {
-    font-size: 32px;
-    z-index: 1;
+#effects {
 }
 
 #clickarea {
@@ -55,11 +94,4 @@ body {
     z-index: 2;
     position: absolute;
     top: 0;
-}
-
-#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 256px;
-    text-align: center;
 }
