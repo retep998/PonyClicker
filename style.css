@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: Equestria;
+    src: url("Equestria.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +12,11 @@
     border: none;
     outline: none;
 }
+
 body {
+    font-family: Equestria;
 }
+
 #count {
     font-size: 100px;
 }
