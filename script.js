@@ -28,10 +28,11 @@ function createBoop(x, y) {
     boop.setAttribute("class", "boop");
     boop.style.opacity = 1;
     boop.style.position = "absolute";
-    boop.style.left = x + "px";
-    boop.style.top = y + "px";
+    boop.style.left = x - 32 + "px";
+    boop.style.top = y - 16 + "px";
     document.getElementById("boops").appendChild(boop);
     setTimeout(updateBoop, 50, boop);
+    new Audio("boop.mp3").play();
 }
 function updateBoop(boop) {
     var x = Number(boop.style.opacity);
