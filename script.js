@@ -13,7 +13,7 @@ var pony = {
     },
     load: function () {
         pony.count = Number(localStorage.getItem("count"));
-        pony.muted = Boolean(localStorage.getItem("muted"));
+        pony.muted = localStorage.getItem("muted") == "true";
     },
     update: function () {
         document.getElementById("count").textContent = pony.formatNumber(pony.count) + " boops";
