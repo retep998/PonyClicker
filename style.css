@@ -11,18 +11,31 @@
     font: inherit;
     border: none;
     outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
     font-family: Equestria;
 }
 
-#count {
-    font-size: 100px;
+
+.boop {
+    font-size: 16px;
 }
+
+#count {
+    font-size: 128px;
+}
+
 #pony {
     cursor: pointer;
 }
+
 #wrapper {
     margin-left: auto;
     margin-right: auto;
