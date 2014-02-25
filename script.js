@@ -41,6 +41,10 @@ var pony = {
         boop.style.position = "absolute";
         boop.style.left = x - 32 + "px";
         boop.style.top = y - 16 + "px";
+        var transform = "rotate(" + (Math.random() * 30 - 15) + "deg)";
+        boop.style.transform = transform;
+        boop.style.MozTransform = transform;
+        boop.style.webkitTransform = transform;
         document.getElementById("effects").appendChild(boop);
         setTimeout(pony.updateBoop, 50, boop);
         new Audio("boop.mp3").play();
