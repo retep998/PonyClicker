@@ -6,3 +6,17 @@
     border: none;
     outline: none;
 }
+body {
+}
+#count {
+    font-size: 100px;
+}
+#pony {
+    cursor: pointer;
+}
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 256px;
+    text-align: center;
+}
