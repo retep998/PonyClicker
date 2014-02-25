@@ -23,17 +23,30 @@ body {
     font-family: Equestria;
 }
 
-
 .boop {
-    font-size: 16px;
 }
 
 #count {
     font-size: 128px;
 }
 
-#pony {
+#clickarea {
+    width: 256px;
+    height: 256px;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+
+#boops {
+    font-size: 32px;
+    z-index: 1;
+}
+
+#pony {
+    width: 256px;
+    height: 256px;
+    background-image: url("pony.png");
 }
 
 #wrapper {

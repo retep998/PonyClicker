@@ -10,7 +10,7 @@ function loadPony() {
 }
 function init() {
     loadPony();
-    document.getElementById("pony").addEventListener("click", clickPony, false);
+    document.getElementById("clickarea").addEventListener("click", clickPony, false);
     window.addEventListener("unload", savePony, false);
     setInterval(savePony(), 1000 * 60);
 }
@@ -30,15 +30,16 @@ function createBoop(x, y) {
     boop.style.position = "absolute";
     boop.style.left = x + "px";
     boop.style.top = y + "px";
-    document.getElementById("effects").appendChild(boop);
-    setTimeout(updateBoop, 100, boop);
+    document.getElementById("boops").appendChild(boop);
+    setTimeout(updateBoop, 50, boop);
 }
 function updateBoop(boop) {
-    var x = Number(boop.style.opacity) - 0.1;
+    var x = Number(boop.style.opacity);
     if (x < 0.1) {
-        document.getElementById("effects").removeChild(boop);
+        document.getElementById("boops").removeChild(boop);
     } else {
-        boop.style.opacity = x;
-        setTimeout(updateBoop, 100, boop);
+        boop.style.opacity = x - 1. / 16;
+        boop.style.top = Number(boop.style.top.substr(0, boop.style.top.indexOf("px"))) - 1 + "px";
+        setTimeout(updateBoop, 50, boop);
     }
 }
