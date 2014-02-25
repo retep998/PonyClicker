@@ -1,6 +1,11 @@
 
 var pony = {
     count: 0,
+    formatNumber: function (x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+    },
     save: function () {
         localStorage.setItem("count", pony.count);
     },
@@ -9,7 +14,18 @@ var pony = {
         pony.updateCount();
     },
     updateCount: function () {
-        document.getElementById("count").textContent = pony.count;
+        document.getElementById("count").textContent = pony.formatNumber(pony.count);
+        var n;
+        if (pony.count < 10) {
+            n = 1;
+        } else if (pony.count < 100) {
+            n = 2;
+        } else if (pony.count < 1000) {
+            n = 3;
+        } else {
+            n = 4;
+        }
+        document.getElementById("pony").setAttribute("src", "assets/img/pony" + n + ".png");
     },
     init: function () {
         pony.load();
@@ -19,12 +35,13 @@ var pony = {
     },
     createBoop: function (x, y) {
         var boop = document.createElement("p");
+        var pos = document.getElementById("ponyarea");
         boop.appendChild(document.createTextNode("*boop*"));
         boop.setAttribute("class", "boop");
         boop.style.opacity = 1;
         boop.style.position = "absolute";
-        boop.style.left = x - 32 + "px";
-        boop.style.top = y - 16 + "px";
+        boop.style.left = x - 32 - pos.getBoundingClientRect().left + "px";
+        boop.style.top = y - 16 - pos.getBoundingClientRect().top + "px";
         document.getElementById("boops").appendChild(boop);
         setTimeout(pony.updateBoop, 50, boop);
         new Audio("boop.mp3").play();
