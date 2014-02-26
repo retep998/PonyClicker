@@ -27,12 +27,12 @@ var pony = {
         } else {
             n = 4;
         }
-        document.getElementById("pony").setAttribute("src", "assets/img/pony" + n + ".png");
+        document.getElementById("ponyimg").setAttribute("src", "assets/img/pony" + n + ".png");
         document.getElementById("mute").textContent = pony.muted ? "Unmute" : "Mute";
     },
     init: function () {
         pony.load();
-        document.getElementById("clickarea").addEventListener("click", pony.click, false);
+        document.getElementById("ponyclick").addEventListener("click", pony.click, false);
         document.getElementById("mute").addEventListener("click", function () {
             pony.muted = !pony.muted;
             pony.update();
@@ -56,7 +56,7 @@ var pony = {
         document.getElementById("effects").appendChild(boop);
         setTimeout(pony.updateBoop, 50, boop);
         if (!pony.muted) {
-            new Audio("boop.mp3").play();
+            new Audio("assets/sound/boop.mp3").play();
         }
     },
     click: function (e) {

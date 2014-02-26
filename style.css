@@ -11,9 +11,7 @@
     font: inherit;
     border: none;
     outline: none;
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -27,10 +25,7 @@ body {
 }
 
 h1 {
-    font-size: 80px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+    font-size: 64px;
 }
 
 table {
@@ -50,18 +45,24 @@ td {
     color: #63c;
 }
 
-#menu {
-    position: absolute;
-    background-color: #f8b;
-    color: #c36;
-    border: solid 3px #c36;
-    z-index: 3;
+#wrapper {
+    display: flex;
+    -moz-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 
-    #menu * {
-        padding-left: 4px;
-        padding-right: 4px;
+#menu {
+    background-color: #f8e;
+    color: #a17;
+    border: solid 3px #a17;
+    flex: 1 100%;
+}
+
+    #menu li {
+        border-right: solid 3px #a17;
         display: inline-block;
+        width: 64px;
+        text-align: center;
     }
 
 #mute {
@@ -72,44 +73,42 @@ td {
     background-color: #8bf;
     color: #63c;
     border: solid 3px #63c;
-    position: absolute;
-    left: 0%;
-    width: 50%;
-    height: 100%;
+    flex: 1 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
-#right {
-    background-color: #b8f;
-    color: #36c;
-    border: solid 3px #36c;
-    position: absolute;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-}
-
-    #left *, #right * {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-#ponyarea {
-    width: 256px;
-    height: 256px;
-    position: relative;
+#count {
+    flex: 0 auto;
 }
 
 #pony {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    flex: 0 auto;
 }
 
-#effects {
-}
-
-#clickarea {
+#ponyclick {
     width: 256px;
     height: 256px;
     cursor: pointer;
     z-index: 2;
     position: absolute;
     top: 0;
+    left: 0;
+}
+
+#right {
+    background-color: #b8f;
+    color: #35c;
+    border: solid 3px #35c;
+    flex: 1 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#effects {
 }
