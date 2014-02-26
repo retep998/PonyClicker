@@ -47,7 +47,6 @@ td {
 
 #wrapper {
     display: flex;
-    -moz-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
@@ -55,19 +54,19 @@ td {
     background-color: #f8e;
     color: #a17;
     border: solid 3px #a17;
-    flex: 1 100%;
+    width: 100%;
+    height: 32px;
 }
 
     #menu li {
         border-right: solid 3px #a17;
         display: inline-block;
         width: 64px;
+        padding-top: 2px;
         text-align: center;
+        height: 100%;
+        cursor: pointer;
     }
-
-#mute {
-    cursor: pointer;
-}
 
 #left {
     background-color: #8bf;
@@ -77,17 +76,13 @@ td {
     display: flex;
     flex-flow: column;
     align-items: center;
-}
-
-#count {
-    flex: 0 auto;
+    padding-bottom: 32px;
 }
 
 #pony {
     width: 256px;
     height: 256px;
     position: relative;
-    flex: 0 auto;
 }
 
 #ponyclick {
@@ -108,7 +103,4 @@ td {
     display: flex;
     flex-flow: column;
     align-items: center;
-}
-
-#effects {
 }

@@ -37,6 +37,12 @@ var pony = {
             pony.muted = !pony.muted;
             pony.update();
         }, false);
+        document.getElementById("reset").addEventListener("click", function () {
+            if (confirm("Are you sure you want to reset your progress?")) {
+                pony.count = 0;
+                pony.update();
+            }
+        });
         window.addEventListener("unload", pony.save, false);
         setInterval(pony.save, 1000 * 60);
         pony.update();
