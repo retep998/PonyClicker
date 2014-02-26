@@ -48,6 +48,11 @@ td {
 #wrapper {
     display: flex;
     flex-flow: row wrap;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #menu {
