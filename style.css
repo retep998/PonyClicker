@@ -1,7 +1,7 @@
 
 @font-face {
-    font-family: Equestria;
-    src: url("Equestria.ttf");
+    font-family: "Equestria";
+    src: url("Equestria.eot"), url("Equestria.ttf") format("truetype");
 }
 
 * {
@@ -31,6 +31,8 @@ h1 {
 table {
     font-size: 30px;
     border-collapse: collapse;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 td {
@@ -77,7 +79,7 @@ td {
     background-color: #8bf;
     color: #63c;
     border: solid 3px #63c;
-    flex: 1 300px;
+    flex: 2 300px;
     display: flex;
     flex-flow: column;
     align-items: center;
