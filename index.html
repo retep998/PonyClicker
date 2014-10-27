@@ -8,14 +8,17 @@
 </head>
 <body>
     <ul id="menu">
+	<li id="credits"><a href="https://github.com/retep998">Credits</a></li>
         <li id="mute">Mute</li>
         <li id="reset">Reset</li>
+        <li id="bpc"></li>
+        <li id="bps"></li>
     </ul>
     <div id="wrapper">
         <div id="left">
             <h1 id="count">-</h1>
             <div id="pony">
-                <img id="ponyimg" />
+                <img id="ponyimg">
                 <div id="ponyclick"></div>
             </div>
         </div>
@@ -23,13 +26,24 @@
             <h1>Upgrades</h1>
             <table>
                 <tr>
-                    <td>Coming soon</td>
+                    <img src="assets/img/pinkpone.png" onclick="added(1, 100)">
+                    <p>One more boop per click</p>
+                    <p>cost: 100 boops</p>
+                    <img src="assets/img/orangepone.png" onclick="added(4, 500)">
+                    <p>10 more boops per click</p>
+                    <p>cost: 500 boops</p>
+                    <img src="assets/img/bluepone.png" onclick="added(2, 200)">
+                    <p>One boop every 2 seconds</p>
+                    <p>cost: 200 boops</p>
+		    <img src="assets/img/whitepone.png" onclick="added(3, 1000)">
+                    <p>1% extra boops per second</p>
+                    <p>cost: 1000 boops</p>
                 </tr>
             </table>
         </div>
     </div>
     <div id="effects"></div>
-    <audio src="assets/sound/boop.mp3" preload="auto" />
+    <audio src="assets/sound/boop.mp3" preload="auto" >
     <script type="text/javascript">
         pony.init();
     </script>
